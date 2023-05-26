@@ -4,6 +4,12 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "employee")
 public class Employeee {
+    public Employeee(long id, String name, double salary, Address address) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        this.address = address;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

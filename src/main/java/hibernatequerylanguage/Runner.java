@@ -29,12 +29,15 @@ public class Runner {
         try{
 
             tx = session.beginTransaction();
+            Employeee employee = new Employeee(1001,"Fazil",10000,new Address(1001,"Denizli"));
+
 
             Employeee employee = session.get(Employeee.class,1002);
+            Address address =  session.get(Address.class,1002);
 
-            System.out.println(employee);
+            System.out.println(employee+" "+address);
 
-            System.out.println(session.createQuery("select name,city from Employeee join Address on employee.id=employee.id").list());
+            //System.out.println(session.createQuery("select name,city from Employeee join Address on employee.id=employee.id").list());
 
 
         }finally {

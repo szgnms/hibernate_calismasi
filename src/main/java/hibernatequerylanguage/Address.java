@@ -10,6 +10,14 @@ public class Address {
     @Column(name="id")
     private long id;
 
+    public Address(long id, String addressLine1, String zipcode, String city, Employeee employee) {
+        this.id = id;
+        this.addressLine1 = addressLine1;
+        this.zipcode = zipcode;
+        this.city = city;
+        this.employee = employee;
+    }
+
     @Column(name = "address_line1")
     private String addressLine1;
 
